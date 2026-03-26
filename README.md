@@ -1,1 +1,1 @@
-# Customer Portal Web
+# Inventory Management Service
