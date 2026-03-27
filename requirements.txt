@@ -1,0 +1,4 @@
+# Rohith Kumar(Devops)
+fastapi
+uvicorn
+pytest
