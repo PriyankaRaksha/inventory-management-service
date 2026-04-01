@@ -1,17 +1,13 @@
 from fastapi import APIRouter
+from app.services.product_service import add_product
 
 router = APIRouter()
 
 products = []
 
 @router.post("/products")
-def create_product(name:str, quantity:int):
+@router.post("/products")
 
-    product = {
-        "name": name,
-        "quantity": quantity
-    }
+def create_product(name:str,quantity:int):
 
-    products.append(product)
-
-    return product
+    return add_product(name,quantity)
