@@ -1,0 +1,27 @@
+<html>
+
+<body>
+
+<h2>Add Product</h2>
+
+<input id="name" placeholder="product name">
+
+<input id="qty" placeholder="quantity">
+
+<button onclick="addProduct()">Add</button>
+
+<script>
+
+function addProduct(){
+
+fetch("http://localhost:8003/products",{
+method:"POST"
+})
+
+}
+
+</script>
+
+</body>
+
+</html>
