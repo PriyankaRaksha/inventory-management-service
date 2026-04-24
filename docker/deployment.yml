@@ -1,0 +1,4 @@
+services:
+  inventory:
+    image: inventory:v1
+    replicas: 2
