@@ -4,3 +4,9 @@ def update_stock(product_id, quantity):
     product.stock -= quantity
 
     return product
+
+def fetch_stock_history(product_id):
+    return db.query(
+        "SELECT * FROM stock_history WHERE product_id=%s",
+        product_id
+    )
