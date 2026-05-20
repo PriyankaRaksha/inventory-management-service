@@ -1,4 +1,6 @@
-def update_stock(id, qty):
-    product = db.get(id)
-    product.stock -= qty
+def update_stock(product_id, quantity):
+    product = db.get(product_id)
+
+    product.stock -= quantity
+
     return product
