@@ -1,6 +1,9 @@
 def update_stock(product_id, quantity):
     product = db.get(product_id)
 
+    if product.stock < quantity:
+        raise Exception("Insufficient stock")
+
     product.stock -= quantity
 
     return product
