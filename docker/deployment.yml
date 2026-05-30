@@ -2,3 +2,6 @@ services:
   inventory:
     image: inventory:v1
     replicas: 2
+
+environment:
+  - ENABLE_LOW_STOCK_ALERTS=true
