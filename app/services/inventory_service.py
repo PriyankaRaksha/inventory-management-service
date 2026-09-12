@@ -24,3 +24,11 @@ def fetch_supplier_details(product_id):
         "SELECT * FROM suppliers WHERE product_id=%s",
         product_id
     )
+
+def fetch_inventory_summary():
+    products = db.query(
+        "SELECT category, SUM(stock) AS total_stock "
+        "FROM inventory GROUP BY category"
+    )
+
+    return products
