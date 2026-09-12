@@ -4,3 +4,8 @@ function renderInventory(items) {
             `<div>${item.name}</div>`
         ).join("");
 }
+
+function renderSupplier(data) {
+    document.getElementById("supplier").innerHTML =
+        `<p>${data.name}</p>`;
+}
