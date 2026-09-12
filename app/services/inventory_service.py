@@ -18,3 +18,9 @@ def fetch_low_stock_items():
     return db.query(
         "SELECT * FROM inventory WHERE stock < 10"
     )
+
+def fetch_supplier_details(product_id):
+    return db.query(
+        "SELECT * FROM suppliers WHERE product_id=%s",
+        product_id
+    )
